@@ -56,6 +56,6 @@
   "scripts": {
     "build": "babel-node tools/build.js && npm run open:dist",
     "heroku-prebuild": "",
-    "heroku-postbuild": "babel-node tools/build.js",
+    "heroku-postbuild": "babel-node tools/build.js"
   }
 }
