@@ -1,0 +1,157 @@
+﻿<div class="container">
+
+
+  <app-layout-header></app-layout-header>
+
+  <div class="row">
+    &nbsp;
+  </div>
+
+  <form class="row" [formGroup]="homeForm" (ngSubmit)="onSubmit()">
+    <div class="col-lg-10 align-content-center">
+      <input class="input" name="city" type="text" placeholder="City" formControlName="city">
+    </div>
+    <div class="col-lg-2 align-content-center">
+      <button class="button is-info" type="submit" class="button is-primary">
+        Search
+      </button>
+    </div>
+  </form>
+
+  <div class="row">
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    &nbsp;
+  </div>
+
+  <div *ngIf="data" class="row">
+    <h1 class="col-lg-12">Weather of {{data.name}} is <img
+      src="http://openweathermap.org/img/w/{{data.weatherIcon}}.png"/></h1>
+  </div>
+
+
+  <table *ngIf="data" class="table">
+    <tbody>
+    <tr>
+      <td>
+        Temperature
+      </td>
+      <td>
+        {{data.temperature | temperaturePipe}}  &#8451;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Weather Id
+      </td>
+      <td>
+        {{data.weatherId}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Weather Icon
+      </td>
+      <td>
+        {{data.weatherIcon}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Weather Description
+      </td>
+      <td>
+        {{data.weatherDescription}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Country Code
+      </td>
+      <td>
+        {{data.countryCode}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Longtitude
+      </td>
+      <td>
+        {{data.longitude}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Latitude
+      </td>
+      <td>
+        {{data.latitude}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Base
+      </td>
+      <td>
+        {{data.base}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Wind Speed
+      </td>
+      <td>
+        {{data.windSpped}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sea Level
+      </td>
+      <td>
+        {{data.seaLevel}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Wind Degree
+      </td>
+      <td>
+        {{data.windDeg}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Pressure
+      </td>
+      <td>
+        {{data.pressure}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Ground level
+      </td>
+      <td>
+        {{data.grndLevel}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sunrise
+      </td>
+      <td>
+        {{data.sunrise}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sunset
+      </td>
+      <td>
+        {{data.sunset}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <app-layout-footer></app-layout-footer>
+</div>

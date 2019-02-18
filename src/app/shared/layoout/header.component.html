@@ -1,0 +1,16 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item">Weather&nbsp;<i class="material-icons">face</i></div>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div>{{ username }} </div>
+        <div>&nbsp;</div>
+        <a class="button is-primary" (click)="router.navigate(['/login']);">
+          <strong>Log Out</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
