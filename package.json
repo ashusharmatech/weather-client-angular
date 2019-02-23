@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
