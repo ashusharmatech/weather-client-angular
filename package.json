@@ -54,13 +54,7 @@
     "node-sass": "^4.9.2"
   },
   "scripts": {
-    "start": "http-server",
-    "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
-    "pree2e": "webdriver-manager update",
-    "e2e": "protractor",
     "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build && mv dist/* .",
-    "server": "http-server"
+    "postinstall": "ng build && mv dist/* ."
   }
 }
